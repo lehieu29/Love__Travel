@@ -21,16 +21,21 @@ html {
 .text-underline {
     position: relative;
     z-index: 1;
+    display: inline-block;
 }
 
 .text-underline::before {
     content: "";
     position: absolute;
-    bottom: 11px;
+    bottom: 1px;
     left: 0;
     right: 0;
     height: 5px;
     z-index: -1;
+}
+
+.text-underline--purple::before {
+    background-color: #ba71da;
 }
 
 .text-highlight {
@@ -49,6 +54,7 @@ html {
     border-radius: 3px;
     color: var(--white-color);
 }
+
 /* End: Text */
 
 /* Arrow */
@@ -175,6 +181,7 @@ a.btn--white {
     font-size: 2rem;
     line-height: 20px;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 .destination__content-name {
@@ -183,6 +190,7 @@ a.btn--white {
     font-size: 1.4rem;
     line-height: 28px;
     cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .destination__button-wrap {

@@ -1,11 +1,79 @@
 /* Mobile: width < 740px  */
 @media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
 
+    .main {
+        overflow: hidden;
+    }
+
+    .text-underline::before {
+        bottom: 1px;
+    }
+
+    .tour-wrap {
+        padding: 20px 30px 20px 50px;
+    }
+
+    .tour-slide__img-wrap {
+        padding: 20px 15px 0 35px;
+    }
+
+    .tour-slide__time {
+        position: unset;
+        background-color: transparent;
+    }
+
+    .tour-slide__time-content-wrap {
+        margin: 0 15px 0 35px;
+    }
+    
+    .tour-slide__cross::before {
+        content: "";
+    }
+
+    .tour__item {
+        padding: 0 30px 0 50px;
+    }
+
+    .footer__heading-wrap {
+        text-align: center;
+    }
+
+    .footer__input-wrap {
+        text-align: center;
+    }
+
+    .footer__input {
+        margin: 0;
+    }
+
+    .footer__submit {
+        width: 70%;
+    }
 }
 
 /* Tablet: width >= 740px and width <= 1024px */
 @media (min-width: 740px) and (max-width: 1024px) {
+    
 
+    .tour-wrap {
+        padding: 20px 43px 20px 23px;
+    }
+
+    .tour-slide__img-wrap {
+        padding: 20px 15px 20px 35px;
+    }
+
+    .tour-slide__time {
+        padding: 0 23px 0 43px;
+        background-color: transparent;
+    }
+
+    .footer__submit {
+        min-width: 232px;
+    }
 }
 
 /* Mobile + Tablet: width <= 1024px */
@@ -169,19 +237,6 @@
         height: 44px;
     }
 
-    .tour-wrap {
-        padding: 20px 43px 20px 23px;
-    }
-
-    .tour-slide__img-wrap {
-        padding: 20px 15px 20px 35px;
-    }
-
-    .tour-slide__time {
-        padding: 0 23px 0 43px;
-        background-color: transparent;
-    }
-
     .tour-slide__time-item {
         display: block;
     }
@@ -212,10 +267,6 @@
 
     .footer__input-wrap {
         margin-top: 60px;
-    }
-
-    .footer__submit {
-        min-width: 232px;
     }
 
     .footer__content-img-wrap {
@@ -253,5 +304,15 @@
 @media (min-width: 1025px) {
     .hide-on-pc {
         display: none;
+    }
+
+    .tour-slide__time-content-wrap {
+        display: flex;
+        padding-left: 16px;
+        width: 100%;
+    }
+
+    .tour-slide__cross::before {
+        right: -48px;
     }
 }
