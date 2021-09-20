@@ -4,10 +4,6 @@
         display: none;
     }
 
-    .main {
-        overflow: hidden;
-    }
-
     .text-underline::before {
         bottom: 1px;
     }
@@ -52,6 +48,10 @@
     .footer__submit {
         width: 70%;
     }
+
+    .footer__img {
+        height: 1664px;
+    }
 }
 
 /* Tablet: width >= 740px and width <= 1024px */
@@ -73,6 +73,10 @@
 
     .footer__submit {
         min-width: 232px;
+    }
+
+    .footer__img {
+        height: 1409px;
     }
 }
 
@@ -118,33 +122,22 @@
     }
 
     .checkbox-show-navbar-mb-tablet:checked ~ .mobile-tablet-navbar {
-        display: block;
+        right: 0;
     }
 
     .mobile-tablet-navbar {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        bottom: 0;
+        width: 300px;
+        transition: right ease 0.8s;
     }
 
     .header__navbar-list {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 300px;
         background-color: #555555;
         overflow-y: auto;
         padding: 40px;
-        animation: appear-navbar ease-out 0.5s;
-    }
-
-    @keyframes appear-navbar {
-        from {
-            transform: translateX(100%);
-        }
-    
-        to {
-            transform: translateX(0);
-        }
     }
 
     .header__navbar-item {
@@ -245,6 +238,17 @@
         background-color: #14b9d5;
         display: flex;
         height: 100%;
+        position: relative;
+    }
+
+    .tour-slide__time-content {
+        position: unset;
+    }
+
+    .tour-slide__cross::before {
+        left: 100%;
+        right: unset;
+        z-index: 1;
     }
 
     .tour__item {
@@ -259,10 +263,6 @@
     .promotions__item-price-wrap {
         border-top: 1px solid rgba(0, 0, 0, 0.2);
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    }
-
-    .footer__img {
-        height: 1409px;
     }
 
     .footer__input-wrap {

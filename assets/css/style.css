@@ -145,29 +145,18 @@
 }
 
 .checkbox-show-sidebar:checked ~ .header__sidebar {
-    display: block;
+    right: 0;
 }
 
 .header__sidebar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -350px;
     bottom: 0;
     width: 350px;
     background-color: var(--white-color);
     overflow-y: auto;
-    display: none;
-    animation: appear-sidebar ease-out 0.5s;
-}
-
-@keyframes appear-sidebar {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
+    transition: right 0.8s ease;
 }
 
 .header__sidebar-close {
