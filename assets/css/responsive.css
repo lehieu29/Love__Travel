@@ -132,11 +132,11 @@
         bottom: 0;
         width: 300px;
         transition: right ease 0.8s;
+        overflow-y: auto;
     }
 
     .header__navbar-list {
         background-color: #555555;
-        overflow-y: auto;
         padding: 40px;
     }
 
